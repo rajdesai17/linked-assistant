@@ -1,0 +1,535 @@
+/**
+ * LinkedIn Connection Assistant - Styles
+ * Professional styling for popup interface and LinkedIn integration
+ */
+
+/* ====== POPUP STYLES ====== */
+
+.popup-body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f8f9fa;
+    width: 350px;
+    min-height: 500px;
+}
+
+.popup-container {
+    background: linear-gradient(135deg, #0073b1 0%, #005885 100%);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.popup-header {
+    background: linear-gradient(135deg, #0073b1 0%, #005885 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.popup-title {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.popup-subtitle {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+    font-weight: 400;
+}
+
+/* Content */
+.popup-content {
+    background: white;
+    padding: 20px;
+}
+
+.instruction-section {
+    background: #f0f8ff;
+    border: 1px solid #e6f3ff;
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    margin: 0;
+    font-size: 12px;
+    color: #0073b1;
+    line-height: 1.4;
+}
+
+/* Form Styles */
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.form-textarea {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #0073b1;
+    box-shadow: 0 0 0 2px rgba(0, 115, 177, 0.1);
+}
+
+.form-textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.preview-textarea {
+    background-color: #f8f9fa;
+    color: #666;
+    cursor: default;
+}
+
+/* Button Styles */
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.save-button, .generate-button {
+    border: none;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: inherit;
+}
+
+.save-button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+}
+
+.save-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+.generate-button {
+    background: linear-gradient(135deg, #0073b1 0%, #005885 100%);
+    color: white;
+}
+
+.generate-button:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 115, 177, 0.3);
+}
+
+.generate-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.save-button:active, .generate-button:active {
+    transform: translateY(0);
+}
+
+.button-loader, .generate-loader {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Message Actions */
+.message-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+.copy-button, .regenerate-button {
+    flex: 1;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: inherit;
+}
+
+.copy-button {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+}
+
+.copy-button:hover {
+    background: linear-gradient(135deg, #138496 0%, #117a8b 100%);
+    transform: translateY(-1px);
+}
+
+.regenerate-button {
+    background: #f8f9fa;
+    color: #666;
+    border: 1px solid #ddd;
+}
+
+.regenerate-button:hover {
+    background: #e9ecef;
+    color: #333;
+    transform: translateY(-1px);
+}
+
+/* Status Messages */
+.status-message {
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 12px;
+    animation: slideIn 0.3s ease;
+}
+
+.status-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+.popup-footer {
+    background: #f8f9fa;
+    padding: 12px 20px;
+    border-top: 1px solid #eee;
+}
+
+.footer-text {
+    margin: 0;
+    font-size: 11px;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ====== LINKEDIN INTEGRATION STYLES ====== */
+
+/* Generate Button */
+.linkedin-assistant-button {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 4px !important;
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-left: 8px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.linkedin-assistant-button:hover {
+    background: linear-gradient(135deg, #218838 0%, #1ca085 100%) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.linkedin-assistant-button:active {
+    transform: translateY(0) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.linkedin-assistant-icon {
+    font-size: 14px;
+}
+
+.linkedin-assistant-text {
+    font-weight: 600;
+}
+
+/* Modal Overlay */
+.linkedin-assistant-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(4px) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 999999 !important;
+    animation: modalFadeIn 0.3s ease !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Modal Content */
+.linkedin-assistant-modal-content {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+    width: 90% !important;
+    max-width: 500px !important;
+    max-height: 80vh !important;
+    overflow: hidden !important;
+    animation: modalSlideIn 0.3s ease !important;
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-20px) scale(0.95); opacity: 0; }
+    to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* Modal Header */
+.linkedin-assistant-modal-header {
+    background: linear-gradient(135deg, #0073b1 0%, #005885 100%) !important;
+    color: white !important;
+    padding: 16px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+
+.linkedin-assistant-modal-header h3 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: white !important;
+}
+
+.linkedin-assistant-close {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+    width: 30px !important;
+    height: 30px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.linkedin-assistant-close:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Modal Body */
+.linkedin-assistant-modal-body {
+    padding: 20px !important;
+}
+
+.linkedin-assistant-message-text {
+    width: 100% !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+    padding: 12px !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+    line-height: 1.5 !important;
+    resize: vertical !important;
+    margin-bottom: 16px !important;
+    box-sizing: border-box !important;
+}
+
+.linkedin-assistant-message-text:focus {
+    outline: none !important;
+    border-color: #0073b1 !important;
+    box-shadow: 0 0 0 2px rgba(0, 115, 177, 0.1) !important;
+}
+
+/* Modal Actions */
+.linkedin-assistant-modal-actions {
+    display: flex !important;
+    gap: 10px !important;
+    margin-bottom: 12px !important;
+}
+
+.linkedin-assistant-copy-btn,
+.linkedin-assistant-regenerate-btn {
+    flex: 1 !important;
+    padding: 10px 16px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-family: inherit !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+}
+
+.linkedin-assistant-copy-btn {
+    background: linear-gradient(135deg, #0073b1 0%, #005885 100%) !important;
+    color: white !important;
+}
+
+.linkedin-assistant-copy-btn:hover {
+    background: linear-gradient(135deg, #005885 0%, #004066 100%) !important;
+    transform: translateY(-1px) !important;
+}
+
+.linkedin-assistant-regenerate-btn {
+    background: #f8f9fa !important;
+    color: #666 !important;
+    border: 1px solid #ddd !important;
+}
+
+.linkedin-assistant-regenerate-btn:hover {
+    background: #e9ecef !important;
+    color: #333 !important;
+    transform: translateY(-1px) !important;
+}
+
+.linkedin-assistant-hint {
+    margin: 0 !important;
+    color: #666 !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+@media (max-width: 600px) {
+    .linkedin-assistant-modal-content {
+        width: 95% !important;
+        margin: 10px !important;
+    }
+    
+    .linkedin-assistant-modal-actions {
+        flex-direction: column !important;
+    }
+    
+    .linkedin-assistant-copy-btn,
+    .linkedin-assistant-regenerate-btn {
+        flex: none !important;
+    }
+}
+
+/* ====== ACCESSIBILITY ====== */
+
+.linkedin-assistant-button:focus,
+.linkedin-assistant-copy-btn:focus,
+.linkedin-assistant-regenerate-btn:focus,
+.linkedin-assistant-close:focus {
+    outline: 2px solid #0073b1 !important;
+    outline-offset: 2px !important;
+}
+
+/* ====== ANIMATION UTILITIES ====== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.3s ease;
+}
+
+/* ====== OVERRIDES FOR LINKEDIN STYLES ====== */
+
+/* Ensure our styles take precedence over LinkedIn's styles */
+.linkedin-assistant-button,
+.linkedin-assistant-modal,
+.linkedin-assistant-modal * {
+    box-sizing: border-box !important;
+}
+
+/* Prevent LinkedIn's styles from affecting our modal */
+.linkedin-assistant-modal * {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ====== PRINT STYLES ====== */
+
+@media print {
+    .linkedin-assistant-button,
+    .linkedin-assistant-modal {
+        display: none !important;
+    }
+} 

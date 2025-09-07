@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Connection Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-body">
+    <div class="popup-container">
+        <div class="popup-header">
+            <h2 class="popup-title">✨ LinkedIn Connection Assistant</h2>
+            <p class="popup-subtitle">Generate personalized connection messages</p>
+        </div>
+        
+        <div class="popup-content">
+            <div class="instruction-section">
+                <p class="instructions">
+                    <strong>How to use:</strong><br>
+                    1. Fill in your professional context below<br>
+                    2. Navigate to any LinkedIn profile<br>
+                    3. Click "Generate Message" to create a personalized message<br>
+                    4. Copy the message and use it in your connection request
+                </p>
+            </div>
+
+            <form id="settingsForm" class="settings-form">
+                <div class="form-group">
+                    <label for="userContext" class="form-label">Your Professional Context</label>
+                    <textarea 
+                        id="userContext" 
+                        class="form-textarea" 
+                        placeholder="Describe your professional background, experience, and interests. Example: 'Senior Software Engineer with 5 years experience in React and Node.js, passionate about fintech and AI solutions.'"
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="userRole" class="form-label">Your Industry/Role</label>
+                    <textarea 
+                        id="userRole" 
+                        class="form-textarea" 
+                        placeholder="Your current role and industry. Example: 'Software Engineer at Tech Startup, Fintech Industry'"
+                        rows="2"
+                    ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="messagePreview" class="form-label">Generated Message</label>
+                    <textarea 
+                        id="messagePreview" 
+                        class="form-textarea preview-textarea" 
+                        placeholder="Click 'Generate Message' to create a personalized LinkedIn connection message..."
+                        readonly
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="saveButton" class="save-button">
+                        <span class="button-text">Save Settings</span>
+                        <span class="button-loader" style="display: none;">●●●</span>
+                    </button>
+                    
+                    <button type="button" id="generateButton" class="generate-button" disabled>
+                        <span class="generate-icon">✨</span>
+                        <span class="generate-text">Generate Message</span>
+                        <span class="generate-loader" style="display: none;">●●●</span>
+                    </button>
+                </div>
+
+                <div class="message-actions" id="messageActions" style="display: none;">
+                    <button type="button" id="copyButton" class="copy-button">
+                        <span class="copy-icon">📋</span>
+                        <span class="copy-text">Copy Message</span>
+                    </button>
+                    <button type="button" id="regenerateButton" class="regenerate-button">
+                        <span class="regenerate-icon">🔄</span>
+                        <span class="regenerate-text">Regenerate</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="statusMessage" class="status-message" style="display: none;"></div>
+        </div>
+
+        <div class="popup-footer">
+            <p class="footer-text">
+                Smart networking made simple - all from your extension popup
+            </p>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html> 
