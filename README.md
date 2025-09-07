@@ -1,8 +1,37 @@
-# LinkedIn Connection Assistant (Powered by Google Gemini 1.5 Flash)
+# LinkedIn Connection Assistant 🤖
 
-A powerful Chrome extension that uses the Google Gemini 1.5 Flash API to automatically generate high-quality, personalized LinkedIn connection request messages. It analyzes target profiles and uses your professional context to craft messages that are contextually relevant and varied.
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?style=flat-square&logo=google-chrome)](https://github.com/rajdesai17/linked-assistant)
+[![Gemini AI](https://img.shields.io/badge/Powered%20by-Gemini%201.5%20Flash-orange?style=flat-square&logo=google)](https://github.com/rajdesai17/linked-assistant)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/rajdesai17/linked-assistant?style=flat-square)](https://github.com/rajdesai17/linked-assistant/stargazers)
 
-## 🚀 Features
+**Transform your LinkedIn networking with AI-powered, personalized connection requests!**
+
+A powerful Chrome extension that leverages Google's Gemini 1.5 Flash API to automatically generate high-quality, personalized LinkedIn connection request messages. It intelligently analyzes target profiles and uses your professional context to craft contextually relevant, engaging messages that stand out from generic connection requests.
+
+## � Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/rajdesai17/linked-assistant.git
+   cd linked-assistant
+   ```
+
+2. **Get your Gemini API key** from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+3. **Create `.env` file**
+   ```bash
+   echo "GEMINI_API_KEY=your_api_key_here" > .env
+   ```
+
+4. **Load in Chrome**
+   - Open `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked" and select this folder
+
+5. **Start networking smarter!** 🚀
+
+## �🚀 Features
 
 - **Gemini 1.5 Flash Powered**: Leverages Google's latest, high-speed model to generate creative and professional connection messages.
 - **Smart Profile Analysis**: Extracts key information from LinkedIn profiles including name, headline, company, location, and industry.
@@ -165,13 +194,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with modern web technologies and Chrome Extension APIs
 - Thanks to the LinkedIn platform for providing rich professional data
 
-## 📞 Support
+## 📞 Support & Contributing
 
-For support, feature requests, or bug reports:
-- Create an issue on GitHub
-- Email: support@linkedin-connection-assistant.com
-- Twitter: @LinkedInConnectAI
+### 🐛 Issues
+Found a bug or have a feature request? Please [create an issue](https://github.com/rajdesai17/linked-assistant/issues) on GitHub.
+
+### 💡 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
+
+### 📢 Stay Updated
+- ⭐ Star this repository to show your support
+- 👀 Watch for updates and new releases
+- 🍴 Fork to create your own version
 
 ---
 
-**Disclaimer**: This extension is not affiliated with or endorsed by LinkedIn. Use responsibly and in accordance with LinkedIn's terms of service. 
+**⚠️ Disclaimer**: This extension is not affiliated with or endorsed by LinkedIn. Use responsibly and in accordance with LinkedIn's terms of service. 
